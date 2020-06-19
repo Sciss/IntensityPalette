@@ -1,5 +1,8 @@
 ## IntensityPalette
 
+[![Build Status](https://travis-ci.org/Sciss/IntensityPalette.svg?branch=main)](https://travis-ci.org/Sciss/IntensityPalette)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sciss/intensitypalette/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sciss/intensitypalette)
+
 ### statement
 
 IntensityPalette is a Java library providing a colour palette optimised for displaying intensities, such as spectral energy. It was adopted from Niklas Werner's [SonaSound](http://sonasound.sourceforge.net/) project. He took a psychooptically balanced 68-color palette developed by Klaus Hobohm and used spline interpolation to generate a resolution of 1073 distinct tones.
