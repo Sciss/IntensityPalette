@@ -13,7 +13,7 @@ This library is (C)opyright 2013–2020 by Hanns Holger Rutz. All rights reserve
 
 The library is available from Maven Central with the following artifact identifier:
 
-    "de.sciss" % "intensitypalette" % "1.0.1"
+    "de.sciss" % "intensitypalette" % "1.0.2"
 
 ### building
 

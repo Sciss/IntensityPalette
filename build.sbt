@@ -1,14 +1,17 @@
 lazy val commonSettings = Seq(
   name             := "IntensityPalette",
-  version          := "1.0.1",
+  version          := "1.0.2",
   organization     := "de.sciss",
-  scalaVersion     := "2.12.11",
+  scalaVersion     := "2.13.3",
   crossPaths       := false,
   autoScalaLibrary := false,
   description      := "Color palette for displaying intensities, optimized for perceptual uniformity",
   homepage         := Some(url(s"https://github.com/Sciss/${name.value}")),
   licenses         := Seq("BSD-style" -> url(s"https://raw.github.com/Sciss/${name.value}/main/LICENSE")),
   scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature"),
+  javacOptions in Compile ++= Seq("-g", "-target", "1.8", "-source", "1.8"),
+  javacOptions in (Compile, doc) := Nil,  // does not understand 'target'
+  scalacOptions in (Compile, compile) ++= (if (scala.util.Properties.isJavaAtLeast("9")) Seq("-release", "8") else Nil), // JDK >8 breaks API; skip scala-doc
 )
 
 lazy val root = project.in(file("."))
